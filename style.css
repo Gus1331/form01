@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+*{ /* <- limpando algumas propriedades _user agents_ de todos elementos no html antes de começar */
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(0, 0, 10);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container{ /* configurando tamanho do conteúdo */
+    max-width: 1000px;
+    margin: auto;
+}
+
+header{ /*header e titulo (pt01)*/
+    background-color: rgb(106, 163, 216);
+    padding: 10px;
+}
+h1{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: rgb(255,255,255);
+    text-align: center;
+    text-shadow: 0 0 1.1px rgb(255, 255, 255);
+}
+
+section{/* background e formulário (pt02) */
+    padding: 20px; 
+    background: url(images/people.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+form{
+    max-width: 230px;
+    padding: 20px;
+    background-color: rgba(240, 255, 255, 0.829);
+    float: right;
+    border-radius: 2px;
+}
+h2{
+    font-size: 16px;
+    text-transform: uppercase;
+}
+#formtext{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+input, select{ /* <-configurando areas de texto para os input e select */
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+}
+select{/* <-personalizando seta da dropbox */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(images/arrow.jpg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    
+}
+input[type="submit"]{ /* <- Botão "INSCREVA-SE" */
+    color:rgb(255, 255, 255);
+    background-color: rgb(106, 163, 216);
+    font-weight: bold;
+}
+input[type="submit"]:hover{
+    background-color: rgb(81, 142, 199);
+    color: rgb(197, 255, 250);
+    cursor: pointer;
+}
+
+footer{ /*Rodapé (pt03) */
+    padding: 40px;
+    background-color: rgb(14, 19, 24);
+    text-align: center;
+    margin-bottom: 100px;
+}
+img#face{
+    width: 160px;
+    border-radius: 5px;
+}
+div#description{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    max-width: 40%;
+    margin-left: 40px;
+}
+h3{
+    font-size: 24px;
+}
+#description>p, h3{
+    margin-bottom: 20px;
+}
+#credits{
+    color: rgb(255, 255, 255);
+    position: relative;
+    bottom: -15px;
+    font-size: 13px;
+    text-align: right;
+    font-family: monospace;
+}
+a#github{
+    text-decoration: none;
+    font-size: 15px;
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+    color: rgb(255,255,255);
+}
+a#github:hover{
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+    color: rgb(197, 255, 250);
+}
+
+@media screen and (max-width: 700px) { /* Responsividade do formulário <form> */
+    form{
+        max-width: 500px;
+        float: right;
+    }
+}
